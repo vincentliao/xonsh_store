@@ -9,3 +9,18 @@ $COLOR_RESULTS = True
 $AUTO_SUGGEST = True
 
 $XONSH_COLOR_STYLE = 'native'
+
+
+
+def listen():
+    print($(netstat -na | grep LISTEN))
+
+def ip():
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    print(s.getsockname()[0])
+    s.close()
+
+
+
