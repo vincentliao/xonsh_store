@@ -1,17 +1,18 @@
+
+# Environment variable
 $PATH = ['/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin']
 $MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
-
 $PROMPT = '{GREEN}{cwd} {branch_color}{curr_branch} {INTENSE_BLUE}>>> {NO_COLOR}'
-
 $SHELL_TYPE = 'prompt_toolkit'
 $COLOR_INPUT = True
 $COLOR_RESULTS = True
 $AUTO_SUGGEST = True
-
 $XONSH_COLOR_STYLE = 'native'
 
+# Powerline
+xontrib load powerline
 
-
+# Utility
 def listen():
     print($(netstat -na | grep LISTEN))
 
@@ -21,6 +22,4 @@ def ip():
     s.connect(("8.8.8.8", 80))
     print(s.getsockname()[0])
     s.close()
-
-
 
