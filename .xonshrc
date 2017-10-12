@@ -8,3 +8,4 @@ $COLOR_INPUT = True
 $COLOR_RESULTS = True
 $AUTO_SUGGEST = True
 
+$XONSH_COLOR_STYLE = 'native'
