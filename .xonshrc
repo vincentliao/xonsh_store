@@ -1,0 +1,10 @@
+$PATH = ['/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin']
+$MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
+
+$PROMPT = '{GREEN}{cwd} {branch_color}{curr_branch} {INTENSE_BLUE}>>> {NO_COLOR}'
+
+$SHELL_TYPE = 'prompt_toolkit'
+$COLOR_INPUT = True
+$COLOR_RESULTS = True
+$AUTO_SUGGEST = True
+
