@@ -23,3 +23,11 @@ def ip():
     print(s.getsockname()[0])
     s.close()
 
+def mac_addr():
+    import netifaces
+    return netifaces.ifaddresses('en0')[netifaces.AF_LINK][0]['addr']
+
+def gateway():
+    import netifaces
+    gwy = netifaces.gateways()
+    return gwy['default'][2][0]
