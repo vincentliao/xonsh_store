@@ -1,16 +1,17 @@
 
 # Environment variable
 $PATH = ['/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin']
-$MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
-$PROMPT = '{GREEN}{cwd} {branch_color}{curr_branch} {INTENSE_BLUE}>>> {NO_COLOR}'
 $SHELL_TYPE = 'prompt_toolkit'
 $COLOR_INPUT = True
 $COLOR_RESULTS = True
 $AUTO_SUGGEST = True
 $XONSH_COLOR_STYLE = 'native'
+$EDITOR = 'vim'
+#$PROMPT = '{GREEN}{cwd} {branch_color}{curr_branch} {INTENSE_BLUE}>>> {NO_COLOR}'
 
 # Powerline
 xontrib load powerline
+$MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
 
 # Utility
 def listen():
@@ -20,8 +21,9 @@ def ip():
     import socket
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
-    print(s.getsockname()[0])
+    return s.getsockname()[0]
     s.close()
+    
 
 def mac_addr():
     import netifaces
