@@ -1,6 +1,6 @@
 
 # Environment variable
-$PATH = ['/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin']
+$PATH = ['/Users/vincentliao/.cargo/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin']
 $SHELL_TYPE = 'prompt_toolkit'
 $COLOR_INPUT = True
 $COLOR_RESULTS = True
